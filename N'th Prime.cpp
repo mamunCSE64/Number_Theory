@@ -23,7 +23,7 @@
 #define fi first
 #define se second
 #define Mx LLONG_MAX
-#define Mn LLONG_MIN
+#define Mn LLONG_MIN 
 #define mod %1000000007
 // freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
 // BesidesDuplicateCharacterEraseInString s.erase(unique(s.begin(), s.end()), s.end());
