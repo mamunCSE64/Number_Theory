@@ -65,8 +65,7 @@ int main()
             else if(j) j=v[j-1];
             else i++;
             if(j==m){ count++,j=v[j-1]; }
-        }           
-        for(auto x: v) cout << x sp;cout nl;  
+        }       
         if(count)
         cout << "Matched " << count << " Times" nl;         
         else cout << "Didn't Matched" nl;
