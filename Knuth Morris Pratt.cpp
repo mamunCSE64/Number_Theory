@@ -55,9 +55,9 @@ int main()
         vector<ll> v(p.size());
         i=0,j=1;
         while(j!=m){
-            if(p[i]==p[j]) i++,v[j]=i; // LPS array creating
+            if(p[i]==p[j]) i++,v[j++]=i; // LPS array creating
             else if(i) i=v[i-1];
-            j++;
+            else j++;
         }
         ll count=0,j=0;
         for(i=0;i<n;){
@@ -65,7 +65,8 @@ int main()
             else if(j) j=v[j-1];
             else i++;
             if(j==m){ count++,j=v[j-1]; }
-        }     
+        }           
+        for(auto x: v) cout << x sp;cout nl;  
         if(count)
         cout << "Matched " << count << " Times" nl;         
         else cout << "Didn't Matched" nl;
