@@ -39,8 +39,8 @@ bool comp(pair<long double,ll> a,pair<long double,ll> b){
 //
 void fun(vector<ll> ans[],vector<ll> base[],ll n){
     vector<ll> t[n];
-    for(i=0;i<n;i++){
-        for(j=0;j<n;j++){
+    for(i=0;i<n;i++){ // upto row of first matrix
+        for(j=0;j<n;j++){ // upto column of second matrix **But here n==m;
             ll sum=0;
             for(k=0;k<n;k++){                
                 sum+=ans[i][k]*base[k][j]; // multiply row*colomn value
