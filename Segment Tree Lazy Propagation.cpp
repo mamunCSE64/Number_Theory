@@ -70,7 +70,7 @@ void update(ll node,ll b,ll e,ll l,ll r,ll value){
     if(l<=b and e<=r){
         ll x=(e-b+1)*value;
         tree[node]+=x;
-        if(b!=e) lazy[2*node]+=value,lazy[2*node+1]+=x;
+        if(b!=e) lazy[2*node]+=value,lazy[2*node+1]+=value;
         return;
     }
     ll mid=(b+e)/2;
@@ -97,6 +97,6 @@ int main()
             cin>>op;
             if(op==1) cin>>l>>r>>value,update(1,1,n,l,r,value);
             else cin>>l>>r,cout << sum(1,1,n,l,r) nl;
-        }  
+        }          
     }                  
 }
