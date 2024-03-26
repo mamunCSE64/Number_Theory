@@ -51,17 +51,13 @@ int main()
     {         
         ll n,base; 
         cin>>n>>base;
-        ll a[n]; 
-        for(i=0;i<n;i++) cin>>a[i];
-        vector<ll> basepower(64);        
-        for(i=0;i<n;i++){
-            ll v=a[i],count=0;         
-            while(v){
-                if(v%base==0) v/=base,count++;
-                else v--,basepower[count]++;               
-            } 
-        }  
-        //decimal to other base conversion possible if every x<=1.
+        vector<ll> basepower(64);            
+        ll v=n,count=0;         
+        while(v){
+            if(v%base==0) v/=base,count++;
+            else v--,basepower[count]++;               
+        } 
+        //decimal to other base conversion possible if every(bit) x<=1.
         for(auto x: basepower) cout << x sp;cout nl; // x means this bit how much time occures.
     }       
 }
