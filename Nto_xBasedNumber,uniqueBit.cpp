@@ -76,7 +76,7 @@ int main()
                 ans=min(ans,v[i]+sum);
             }
         }   
-        if(sum==n) ans=sum;
-        cout << ans nl;     
+        if(sum>=n) ans=min(ans,sum);
+        cout << ans nl;  
     }
 }
