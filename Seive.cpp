@@ -40,15 +40,17 @@ bool comp(pair<long double,ll> a,pair<long double,ll> b){
 //
 vector<ll> v(N,1); 
 void fun(){
+    for(int i=2;i<=N;i++) v[i]=i;
     for(int i=2;i*i<=N;i++){
-        if(v[i]){
-            for(int j=i*i;j<=N;j+=i) v[j]=0;
+        if(v[i]==i){
+            for(j=i*i;j<=N;j+=i){
+                if(v[j]==j) v[j]=i;
+            }
         }
-    }
-    v[0]=0,v[1]=0;
+    }       
 }
 bool seive(ll n){
-    if(v[n]) return 1;
+    if(v[n]==n) return 1;
     else return 0;
 }
 int main()
