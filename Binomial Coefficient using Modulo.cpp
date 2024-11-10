@@ -39,13 +39,7 @@ bool comp(pair<long double,ll> a,pair<long double,ll> b){
 // **********************|| Main Code ||********************************
 //
 
-ll fun(ll n,ll md){
-    ll ans=1;
-    for(i=2;i<=n;i++){
-        ans=(ans*i)%md; // factorial calculation
-    }
-    return ans;
-}
+ 
 ll power(ll base,ll md){
     ll ans=1,p=md-2; // as base is inverse so,base power will be mod-2;
     while(p){
